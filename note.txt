@@ -1,0 +1,332 @@
+HTML（超文本标记语言，由浏览器解释执行的语言）
+    语法：<标签名>
+	      //内容
+		  </标签名>
+		  1.<!DOCTYPE html>   //告诉浏览器以某一个版本规范去解释执行文件
+		     html：+Tab  自动写规范直接生成
+		  2.html：根标签，根元素
+		    head：头部标签，内容基本不变
+			body：会经常编辑的标签，页面结构全都写在body里
+			title：决定页面标题
+		  3.标签：
+		    div：经常使用的无意义的标签
+			<meta charset="utf-8" />：指定页面编码为utf-8，防止中文乱码
+			h3-h6：标题标签
+			ul：无序列表标签
+			li：写在列表标签内
+			ol：有序列表标签
+			img：引入图片的标签
+			    属性名="属性名"    //不同属性之间用空格隔开
+				src="图片路径" 
+				alt="图片加载失败时的提示文字"
+				title="鼠标悬停时的提示文字"
+                  a：超链接标签
+                       href=“路径”
+                       target=“_blank"    //在新窗口中打开页面
+                 span：无意义的标签
+		  4.路径寻找方式：
+				相对路径：相对于当前文件寻找另一个文件   
+				         ./ 当前目录下  
+						 ../代表当前目录的上一级目录
+                        绝对路径：根据根目录寻找文件
+						
+						ctrl+shift+T 返回之前页面
+						ctrl+shift+C 出现箭头
+
+CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页样式）
+       1.css引入方式：
+            1.外部引入
+                  <link rel="stylesheet" href="路径">
+                     rel="stylesheet"    //指定link标签引入的是css文件
+                     href="css文件的路径"
+       2.css选择器
+         1. *{}  *为通用选择器    ctrl+Delete 删除此行     复制：光标放在要复制的那一行就可以复制                              
+                      选择器{
+                         属性名:属性值;4
+                         属性名1:属性值1;
+                      }
+											
+         2.标签选择器
+           div（标签名）      //标签选择器
+                            类名  .class(类名)='box1"   //类名选择器,多个类名用空格隔开
+                                            <div class="类名"></div>
+																						
+         3. #id(id名)=""   //id选择器
+             <div id="类名"></div>
+优先级：*<div<标签名<.class<#id   越具体的优先级越高      
+    
+         4. 后代选择器：
+             选择器 选择器       //后代选择器
+						 
+		     5.伪元素选择器   .block ::after{
+			                           content:我是伪标签
+									   display:block;
+		                          }
+															
+				6.选择器，选择器       //群组选择器
+				
+				7.选择器>选择器       //子代选择器
+						   
+						   
+       3.标签的分类：  
+               1.块标签：div，h1-h6，ul，li,p（段落），pre（格式化标签），header,nav,aside,main,section,footer,(dl,dd,dt)有序列表标签
+                  特性：1.独占一行     2.可以设置宽高     3.默认宽为父盒子的宽，默认的高度由内容决定
+			   2.行内标签：a，span，i（斜体），em（斜体），b（粗体），strong（粗体），s（删除线），del（删除线）
+			      特性：不独占一行，不可以设置宽高，默认宽高由内容决定
+			   3.行内块标签：img
+			                
+							input：输入框
+							
+								<input type="text" />  //文本框
+								<input type="password" />  //密码框
+								<input type="number" />  //数组框
+								outline:line;      //焦点时取消输入框焦点边框变色
+			      特性：不独占一行，可以设置宽高，默认的宽高由图片决定
+				  
+				 
+       4.css属性
+                 background:red;   //设置背景
+				        background-image: url(背景图片路径);
+				        background-size: 水平大小 垂直大小;  //设置背景图片大小
+				        background-repeat: no-repeat;  //设置背景图片是否重复
+				        background-position: 水平方向 垂直方向;   //设置背景图片位置 可以使用精灵图片
+				 background: url(背景图片路径) no-repeat(路径不重复) center center（水平/垂直方向位置）/100%（水平方向大小） auto（垂直方向大小）;
+                          颜色的设置方式：
+                                1，英文单词
+                                2，background:rgb(r,g,b);  //用rgb设置背景颜色，哪个数值大那个颜色比重高    //范围0~255 
+                                3，rgba(r,g,b,0~1)  a为透明度
+                                4，#000000   两两为一组，代表红绿蓝，16进制    //如果前面三个和后面三个值一样可以省略后边三个
+                  
+				  width宽        height高         margin外边距      padding内边距          float浮点数浮动
+                  
+				  float:left;  //让div横排
+                 
+				 margin-left:20px;  //左边距
+				 
+				 margin:0 auto;  //可以让块标签居中
+				 
+				 overflow:hidden  //溢出隐藏
+				 
+				 list-style:none;  //去掉默认样式
+				 
+				 font-style:normal;  //设置字体不为斜体
+				            oblique  //让字体变为斜体
+							normal   //让字体变为正常
+							
+				 font-weight:100-700;  //字体粗细，由细到粗
+				             normal   //正常
+							 bold     //粗体
+							 
+				cursor:pointer;  //鼠标移入变手
+				       default   //默认箭头
+				
+				opacity:0.5;  //改变不透明度 设置盒子整体透明度 范围（0-1）  
+				
+				background:rgba（0，0，0，1）;  //设置背景不透明度
+				
+				box-shadow:水平方向 垂直方向 模糊程度 阴影大小 颜色 inset（内阴影）;   //默认为外阴影
+				
+				text-shadow:水平方向 垂直方向 模糊程度 颜色;  //文字阴影
+				
+				 
+                  字体样式属性：
+                              更改字体颜色：color       
+                              字体大小：font-size         
+                              字体种类：font-family
+                              字体水平对齐方式：text-align:left（默认）/center/right
+                              行高：line-height:300px;  //如果行高与标签高度一致，文字就会出现垂直居中的效果
+							  线设置：text-decoration:line-through  //中划线
+							  				         overline  //上划线
+							  				         none   //去掉默认水平线
+													 
+							font:weight size/line-height family;    //简写
+							  
+				  标签分类的相互转换：			  
+                      display:block;  可以把其他类型标签转换为块标签
+				      display:inline; 可以把其他类型标签转换为行内标签
+				      display:inline-block;  可以把其他类型标签转换为行内块标签
+					  display:none;   让标签消失，失去本身的宽高
+					  
+					  
+	二、盒子模型 
+	    css注释：ctrl+/ 
+		1.盒子内容
+		2.填充（padding）:会使盒子变大
+		    padding:上 右 下 左; 从上面开始顺时针旋转
+			   padding:0px 0px 20px 20px;
+			padding:上下   左右;上下为一组，左右为一组
+			   padding:0px 20px；
+			padding:20px;
+			   直接设置上下左右
+			padding-left
+			padding-right
+			padding-top
+			padding-bottom
+		3.边框样式：会使盒子变大
+		    border:10px solid blue;
+                   大小  样式  颜色
+				   样式：solid实线   double双实线   dashed虚线
+			单独设置一边边框与padding相同
+		4.外边距（margin）：不会影响盒子大小。同时设置一个盒子的下边距和另一个盒子的上边距会有一个重叠的效果
+		    如何设置margin与padding一致
+			margin:上 右 下 左;
+			margin-top的bug：子盒子的margin-top会作用到父盒子上 
+			        触发条件：1>必须是第一个拥有高度的没有浮动没有定位，正常类型的子盒子
+					         2>父盒子有padding-top/border时不会触发
+							 3>父盒子有浮动（float）时也不会有bug
+							 4>父盒子没有overflow:hidden(超出隐藏);属性
+							 5>子盒子没有浮动属性
+					解决办法：1>利用父盒子padding-top代替子盒子的margin-top
+					         2>给父盒子添加overflow:hidden
+							 
+			如何避免盒子变大：1>在盒子自身的宽高上减去padding/border的值
+			                2>设置box-sizing: border-box;    //使盒子不再变大
+							 
+			盒子的真实宽（高）=内容的宽（高）+padding-left（padding-top）+padding-right（padding-bottom）+border-left（border-top）
+			                 +border-right（border-bottom）
+							 
+		5.浮动（float）：让块标签横排，使盒子脱离默认的文档流
+		    问题：
+		    1、浮动的盒子撑不开父盒子的高度
+			    解决办法：1）如果知道父盒子的高度，就给父盒子设置高度
+				         2）给父盒子添加overflow:hidden;     //经常使用
+						 3）在最后加入一个宽高为0的盒子，设置清除浮动clear:both;
+						 4) 利用伪元素选择器，在父盒子的最后，加入一个宽高为0的伪标签
+						              .class::after{
+										  content:"";
+										  width:0px;
+										  height:0px;
+										  display:block;
+										  clear:both;
+									  }
+									  
+			2、卡顿：其他盒子超出掉落的基线，会发生卡顿
+			    掉落的基线：紧挨着掉落的盒子的盒子的最底部
+			
+			3、右浮动时使盒子顺序变反
+			    1）在html中直接把顺序变反
+				2）用一个右浮动的大盒子包起来，让小盒子在左浮动
+				
+			4、浮动的盒子默认的宽度由内容撑开
+			
+			5、任何类型的标签使用float之后会转化为块标签
+			
+			
+补充：
+	1.p标签只能放一段文字
+	2.pre标签  在pre标签内写出什么结构就会展现什么结构。pre标签几乎不使用
+	3.header 头部标签
+	4.nav 导航标签
+	5.aside 侧导航标签
+	6.main 主要内容标记
+	7.section 楼层
+	8.footer底部标签
+		3-8标签与div功能一致，为语义化标签
+	9.，<dl>
+			<dd></dd>
+			<dt></dt>
+		</dl>
+	10. <div>
+	       <span>419</span>     //行内标签用来包裹文字，不会影响对文字的处理
+		   <em>$<em>
+	    </div>
+	11.i 斜体
+	12.b 加粗
+	13.strong 加粗
+	14.s 删除线
+	
+	15.字体样式才继承
+	16去掉默认样式：
+	     ui,li{
+			 list-style:none;   //去掉点
+		 }
+	17.给正方形切圆角：
+	       border-radius:50%;
+				 
+		 给长方形切指定角的圆角：
+		     border-top-right-radius:50%;
+				 border-bottom-right-radius:50%;
+				 
+ *18.如何优化页面加载速度
+     1、精灵图片  设置背景图片位置，可以使用精灵图片
+				 
+				 
+三、icon引入步骤
+	1.查找
+	2.添加入库
+	3.添加到项目
+	4.复制代码到base.css
+	5.创建
+	     .iconfont{
+				 font-family:"iconfont";
+			 }
+	6.创建
+	     <i class="iconfont">复制代码</i>;
+			 
+			 
+四、文字超出隐藏
+  {
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;              //单行文本溢出，显示省略号
+	}
+	
+
+五、浮动与定位
+  横排用浮动，重叠用定位。但不绝对
+	
+	定位（position）：
+	
+	   1.相对定位：相对于之前的位置  不会失去原来的位置
+		 
+		      {
+						position: relative;  //相对定位
+						left（right）: 0;             //水平位置  指定离原来位置的左边（右边）有多远
+						top（bottom）: 100px;          //垂直位置  指定离原来位置的上边（底部）有多远
+					}
+					
+		*2.绝对定位：离自身最近的已经定位（拥有定位属性的）父盒子
+		            会失去自己原来的位置，margin:0 auto;失效（浮动也会使其失效）
+		
+		  .box{
+							width: 800px;
+							height: 600px;
+							background: black;
+							overflow: hidden;
+							position: relative;
+					}
+					
+			.item1{
+				      background: red;
+				      position: absolute;
+				      left: 0;
+				      top: 100px;
+			    }
+					
+		 3.固定定位：根据浏览器的可视窗口定位
+		            会失去自己的位置，margin:0 auto失效
+		   
+			.head{
+				      width:100%;
+							height:100px/vh(视口宽度比例)
+							position:fixed;
+							left:0;
+							top:0;
+			}
+						
+			相关属性：只有使用定位属性的盒子才能使用以下属性
+			    left,right,top,bottom
+					z-index:无上限；   //数字越大层级越高
+					
+			绝对/固定定位的盒子居中：
+					{
+						margin:auto;
+						left:0;
+						right:0;
+						top:0;
+						bottom:0;
+					}
+			
+					
+ 
+					

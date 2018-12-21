@@ -189,7 +189,7 @@
 .shangou{
 	width: 1226px;
 	height: 438px;
-	margin: 24px auto;
+	margin: 40px auto;
 	background: #f5f5f5
 }
 
@@ -241,7 +241,7 @@
 	color: #b5b5b5;
 }
 
-.bottom .left{
+.bottom >.left{
 	width:234px;
 	height: 380px;
 	float: left;
@@ -273,10 +273,51 @@
 #shandian{
 	width: 100px;
 	height: 100px;
-	font-size: 94px;
-	margin-top: 32px;
+	font-size: 84px;
+	margin-top: 20px;
 	color: #e53934;
 	margin-left:57px;
+	
+}
+
+.bottom-left-text2{
+	font-size: 14px;
+	color: #858383;
+	margin-top: 20px;
+}
+
+.bottom-left-time{
+	width: 234px;
+	height: 48px;
+	margin-top: 30px;
+	
+}
+
+.morder{
+	margin-left: 35px;
+}
+
+.bottom-left-time div{
+	float: left;
+}
+
+.bottom-left-time-min{
+	width: 46px;
+	height: 46px;
+	background: #605751;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 46px;
+}
+
+.bottom-left-time-mh{
+	width:14px ;
+	height:46px ;
+	font-size: 16px;
+	color: #291e16;
+	text-align: center;
+	line-height: 46px;
 	
 }
 
@@ -287,11 +328,11 @@
 }
 
 /* .bottom>.right>ul{
-	width: calc(1000px*3);
+	width: calc(1000px * 3);
 	height: 100%;
 	overflow: hidden;
-}
- */
+} */
+
 #shangou-itm1{
 	margin-left: 0px;
 }
@@ -331,12 +372,16 @@
 
 .PA,.PB,.PC{
 	text-align: center;
+	margin: 0 14px;
 }
 
 .PA{
-	font-size: 20px;
+	font-size: 18px;
 	color: #050505;
 	margin-top: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .PB{
@@ -579,10 +624,35 @@
 .banner-left-box{
 	width: 234px ;
 	height:460px ;
-	background:black ;
+	background:rgba(0,0,0,0.5) ;
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	padding: 25px 0;
+	box-sizing: border-box;
+}
+
+.banner-left-box>ul{
+	margin-left: 30px;
+	margin-right: 24px;
+}
+
+.banner-left-box>ul>li{
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+}
+
+#banner-left-box-list-text{
+	float: left;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+#banner-left-box-list-icon{
+	float: right;
+	color: #d2d4d6;
+	font-size:14px;
 }
 
 .banner-img-box>ul>li>img{
@@ -624,7 +694,7 @@
 .banner-icon{
 	width: 41px;
 	height: 69px;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.1);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -633,8 +703,149 @@
 
 .banner-icon-left{
 	left: 234px;
+	background-image: url(../img/icon.png);
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+
 }
+
 
 .banner-icon-right{
 	right: 0;
+	background-image: url(../img/icon.png);
+	background-repeat: no-repeat;
+	background-position: -41px 0;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	
 }
+
+/* banner结束 */
+
+/* banner-2开始 */
+
+.banner-2{
+	width: 1226px;
+	height: 170px;
+	background: #ffffff;
+	margin: 18px auto;
+}
+
+.banner-2>div{
+	float: left;
+	margin-left: 16px;
+}
+
+#banner-2-one{
+	width: 234px;
+	height: 100%;
+	margin-left: 0;
+	background: #5f5750;
+}
+
+.banner-2-two{
+	width: calc(944px / 3);
+	height: 100%;
+	background-image: url(../img/banner-2-2.jpg);
+	background-size: auto 170px;
+}
+
+.banner-2-three{
+	width: calc(944px / 3);
+	height: 100%;
+	background-image: url(../img/banner-2-3.jpg);
+	background-size: auto 170px;
+}
+
+.banner-2-four{
+	width: calc(944px / 3);
+	height: 100%;
+	background-image: url(../img/banner-2-4.jpg);
+	background-size: auto 170px;
+}
+
+#banner-2-one>ul{
+	width:214px ;
+	height: 150px;
+	/* background: whitesmoke; */
+	margin: 10px 10px 10px 10px;
+}
+
+#banner-2-one>ul>li{
+	width:calc(214px / 3) ;
+	height: calc(150px / 2);
+	/* background: lightblue; */
+	float: left;
+	position: relative;
+	text-align: center;
+}
+
+.banner-2-one-line-a{
+	width: 1px;
+	height: 65px;
+	background:rgba(255,255,255,0.2);
+	position: absolute;
+	right: 0;
+	top: 0;
+	
+}
+
+
+.banner-2-one-line-b{
+	width: 1px;
+	height: 65px;
+	background:rgba(255,255,255,0.2);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	
+}
+	
+.banner-2-one-line{
+	width: 62px;
+	height: 1px;
+	background:rgba(255,255,255,0.2);
+	margin-bottom: 0px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+
+.banner-2-one-line-ep{
+	width: 58px;
+	height: 1px;
+	background:rgba(255,255,255,0.2);
+	margin-bottom: 0px;
+	position: absolute;
+	left: 6px;
+	bottom: 0px;
+	/* margin: 0 auto; */
+}
+
+.banner-2-one-line-F{
+	width: 62px;
+	height: 1px;
+	background:rgba(255,255,255,0.2);
+	margin-bottom: 0px;
+	position: absolute;
+	right: 0;
+	bottom: 0px;
+	/* margin: 0 auto; */
+}
+
+
+
+#banner-2-one-icon{
+	color: #dad9d7;
+	font-size: 28px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.banner-2-one-text{
+	color: #dad9d7;
+	font-size:12px;
+	
+	
+}
+/* banner-2结束 */
