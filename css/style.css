@@ -25,7 +25,12 @@
 	line-height: 40px;
 	text-align: center;
 	color: #85a4a4;
-	font-size: 16px;
+	font-size: 14px;
+	transition: all 0.3s;
+}
+
+.A-left .text:hover{
+	color: #FFFFFF;
 }
 
 .A-left .line{
@@ -54,7 +59,12 @@
 	text-align: center;
 	float: left;
 	color: #85a4a4;
-	font-size: 16px;
+	font-size: 14px;
+	transition: all 0.3s;
+}
+
+.R-text .text:hover{
+	color:#FFFFFF;
 }
 
 .R-text .line{
@@ -77,7 +87,7 @@
 	line-height: 40px;
 	text-align: center;
 	color: #85a4a4;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 
@@ -413,7 +423,7 @@
 .tuijian{
 	width: 1226px;
 	height: 438px;
-	margin: 40px auto;
+	margin: 20px auto;
 	background: #f5f5f5
 }
 
@@ -632,27 +642,42 @@
 	box-sizing: border-box;
 }
 
-.banner-left-box>ul{
+/* .banner-left-box>ul{
 	margin-left: 30px;
 	margin-right: 24px;
 }
-
+ */
 .banner-left-box>ul>li{
 	width: 100%;
 	height: 41px;
 	line-height: 41px;
 }
 
-#banner-left-box-list-text{
-	float: left;
-	font-size: 16px;
-	color: #ffffff;
+.banner-left-box>ul>li:hover{
+	background: #ff6700;
 }
 
-#banner-left-box-list-icon{
+.banner-left-box-right{
+	width: calc(1226px - 234);
+	height: 460px;
+	background: #FFFFFF;
+	position: absolute;
+	left: 234px;
+	top: 0px;
+}
+
+#banner-left-box-list-text{
+	float: left;
+	font-size: 15px;
+	color: #ffffff;
+	margin: 0 0 0 30px;
+}
+
+.banner-left-box-list-icon{
 	float: right;
 	color: #d2d4d6;
 	font-size:14px;
+	margin-right: 26px;
 }
 
 .banner-img-box>ul>li>img{
@@ -782,8 +807,8 @@
 
 .banner-2-one-line-a{
 	width: 1px;
-	height: 65px;
-	background:rgba(255,255,255,0.2);
+	height: 70px;
+	background:rgba(255,255,255,0.1);
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -793,8 +818,8 @@
 
 .banner-2-one-line-b{
 	width: 1px;
-	height: 65px;
-	background:rgba(255,255,255,0.2);
+	height: 70px;
+	background:rgba(255,255,255,0.1);
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -802,33 +827,33 @@
 }
 	
 .banner-2-one-line{
-	width: 62px;
+	width: 64px;
 	height: 1px;
-	background:rgba(255,255,255,0.2);
+	background:rgba(255,255,255,0.1);
 	margin-bottom: 0px;
 	position: absolute;
-	left: 0px;
+	left: 3px;
 	bottom: 0px;
 }
 
 .banner-2-one-line-ep{
-	width: 58px;
+	width: 64px;
 	height: 1px;
-	background:rgba(255,255,255,0.2);
+	background:rgba(255,255,255,0.1);
 	margin-bottom: 0px;
 	position: absolute;
-	left: 6px;
+	left: 3px;
 	bottom: 0px;
 	/* margin: 0 auto; */
 }
 
 .banner-2-one-line-F{
-	width: 62px;
+	width: 64px;
 	height: 1px;
-	background:rgba(255,255,255,0.2);
+	background:rgba(255,255,255,0.1);
 	margin-bottom: 0px;
 	position: absolute;
-	right: 0;
+	right: 3px;
 	bottom: 0px;
 	/* margin: 0 auto; */
 }
@@ -853,3 +878,403 @@
 .body{
 	background: #f5f5f5;
 }
+
+.Advertisement{
+	width: 1226px;
+	height: 124px;
+	margin: 20px auto;
+}
+
+.Advertisement>img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 家电开始 */
+
+.appliances{
+	width: 1226px;
+	height: 686px;
+	margin:40px auto ;
+}
+
+.appliances-top{
+	width: 100%;
+	height:58px ;
+}
+
+.appliances-bottom{
+	width: 100%;
+	height: calc(1226px - 58);
+}
+
+.appliances-bottom>div{
+	float: left;
+}
+
+.appliances-top-left{
+	width: 200px;
+	height:100%;
+	float: left;
+}
+
+.appliances-top-left>h2{
+	line-height: 58px;
+}
+
+.appliances-top-right{
+	width:400px;
+	height: 100%;
+	float: right;
+	/* line-height: 58px; */
+}
+
+.appliances-top-right>ul{
+	height: 44px;
+	float: right;
+	box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.appliances-top-right>ul>li{
+	font-size: 16px;
+	/* padding-bottom: 8px; */
+	margin-left: 30px;
+	float: left;
+	box-sizing: border-box;
+	transition: all 0.05s;
+}
+
+.appliances-top-right>ul>li:hover{
+	color: #ff6700;
+	border-bottom: 2px solid #ff6700;
+	padding-bottom: 3px;
+	box-sizing: border-box;
+
+}
+
+.appliances-bottom>div{
+	float: left;
+}
+
+.appliances-bottom-left{
+	width: 248px;
+	height: 614px;
+}
+
+.appliances-bottom-right{
+	width: 978px;
+	height: 614px;
+}
+
+.appliances-bottom-left>div{
+	width: 234px;
+	height: 300px;
+}
+
+.appliances-bottom-left-bottom{
+	margin-top: 14px;
+}
+
+.appliances-bottom-left>div>img{
+	width: 100%;
+	height: 100%;
+}
+
+.appliances-bottom-right>ul{
+	width: 978px;
+	height: 614px;
+}
+
+.appliances-bottom-right>ul>li{
+	width: 234px;
+	height: 300px;
+	float: left;
+	margin-right: 14px;
+    text-align: center;
+	position: relative;
+	overflow: hidden;
+	transition: all 1s;
+}
+
+.appliances-bottom-right-top{
+	margin-bottom: 14px;
+}
+
+.appliances-bottom-right>ul>.iteam{
+	margin-right:0;
+}
+.appliances-bottom-right>ul>li>.picture{
+	width: 100%;
+	height: 150px;
+	padding-top: 34px;
+    text-align: center;
+	margin-bottom: 8px;
+}
+
+.appliances-bottom-right>ul>li>.picture>img{
+	width: auto;
+	height: 150px;
+}
+
+.appliances-bottom-right>ul>li>p{
+	margin: 3px 10px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;   
+}
+
+.appliances-bottom-right>ul>li>.text1{
+	font-size: 14px;
+	color:#484848;
+}
+
+.appliances-bottom-right>ul>li>.text2{
+	font-size: 12px;
+	color:#adadad;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;   
+}
+
+.appliances-bottom-right>ul>li>.price{
+    margin-top: 18px;
+}
+
+.appliances-bottom-right>ul>li>div>.price-now{
+	font-size: 14px;
+	color:#ff722d;
+	padding-right: 3px;
+}
+
+.appliances-bottom-right>ul>li>div>.price-no{
+	font-size: 14px;
+	color:#e1e1e1;
+}
+
+.appliances-bottom-right>ul>.puff{
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+
+.iteam-bottom-1{
+	width: 100%;
+	height: 143px;
+	margin-bottom: 14px;
+	background-color: #FFFFFF;
+}
+
+.iteam-bottom-2{
+	width: 100%;
+	height: 143px;
+	background-color: #FFFFFF;
+}
+
+.appliances-bottom-right>ul>.puff{
+	transition: all 1s;
+}
+
+.flag-upward{
+	transition: all 30s 5s;
+}
+
+.iteam-bottom-2>div{
+	float: left;
+	width: 94px;
+	margin: 30px auto;
+}
+
+.iteam-bottom-2>.text{
+	width: 94px;
+	height: 45px;
+	margin-left: 20px;
+	padding-top:20px;
+}
+
+.iteam-bottom-2>.text>h3{
+	margin-bottom: 8px;
+	font-size: 18px;
+}
+
+.iteam-bottom-2>.text>p{
+	width: 94px;
+	height: 14px;
+	font-size: 14px;
+	color: #a2a2a2;
+	margin-left: 0;
+}
+
+.iteam-bottom-2>.ico{
+	color: #ff5a00;
+	font-size: 48px;
+	line-height: 94px;
+}
+/* 家电结束 */
+
+
+
+
+/* 手机开始 */
+
+.phone{
+	width: 1226px;
+	height: 686px;
+	margin:40px auto ;
+}
+
+.phone-top{
+	width: 100%;
+	height:58px ;
+}
+
+.phone-top-left{
+	width: 200px;
+	height:100%;
+	float: left;
+}
+
+.phone-top-left>h2{
+	line-height: 58px;
+}
+
+.phone-bottom{
+	width: 100%;
+	height: calc(1226px - 58);
+}
+
+.phone-bottom>div{
+	float: left;
+}
+
+.phone-top-right{
+	width: 100px;
+	float: right;	
+	line-height: 58px;
+	transition: all 0.5s;
+}
+
+.phone-top-right>span:hover{
+	color: #ff5a00;
+	
+}
+
+.phone-top-right>p:hover{
+	color:#ff5a00 ;
+	border-bottom: 3px solid #ff5a00;
+}
+
+.phone-top-right>p{
+	font-size: 16px;
+	margin-right: 8px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.phone-top-right>span{
+	font-size: 24px;
+	float: right;
+	color: #b0b0b0;
+}
+
+.phone-bottom>div{
+	float: left;
+}
+
+.phone-bottom-left{
+	width: 248px;
+	height: 614px;
+}
+
+.phone-bottom-right{
+	width: 978px;
+	height: 614px;
+}
+
+
+
+.phone-bottom-left>img{
+	width: 234px;
+	height: auto;
+}
+
+.phone-bottom-right>ul{
+	width: 978px;
+	height: 614px;
+}
+
+.phone-bottom-right>ul>li{
+	width: 234px;
+	height: 300px;
+	float: left;
+	margin-right: 14px;
+    text-align: center;
+	position: relative;
+	overflow: hidden;
+	transition: all 1s;
+}
+
+.phone-bottom-right-top{
+	margin-bottom: 14px;
+}
+
+.phone-bottom-right>ul>.iteam{
+	margin-right:0;
+}
+.phone-bottom-right>ul>li>.picture{
+	width: 100%;
+	height: 150px;
+	padding-top: 34px;
+    text-align: center;
+	margin-bottom: 8px;
+}
+
+.phone-bottom-right>ul>li>.picture>img{
+	width: auto;
+	height: 150px;
+}
+
+.phone-bottom-right>ul>li>p{
+	margin: 3px 10px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;   
+}
+
+.phone-bottom-right>ul>li>.text1{
+	font-size: 14px;
+	color:#484848;
+}
+
+.phone-bottom-right>ul>li>.text2{
+	font-size: 12px;
+	color:#adadad;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;   
+}
+
+.phone-bottom-right>ul>li>.price{
+    margin-top: 18px;
+}
+
+.phone-bottom-right>ul>li>div>.price-now{
+	font-size: 14px;
+	color:#ff722d;
+	padding-right: 3px;
+}
+
+.phone-bottom-right>ul>li>div>.price-no{
+	font-size: 14px;
+	color:#e1e1e1;
+}
+
+.phone-bottom-right>ul>.puff{
+	background-color: #FFFFFF;
+}
+
+
+
+
+/* 手机结束 */
