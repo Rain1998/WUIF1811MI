@@ -16,12 +16,13 @@ a{
 
 @font-face {
   font-family: 'iconfont';  /* project id 974025 */
-  src: url('//at.alicdn.com/t/font_974025_4lg5s93yerq.eot');
-  src: url('//at.alicdn.com/t/font_974025_4lg5s93yerq.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_974025_4lg5s93yerq.woff') format('woff'),
-  url('//at.alicdn.com/t/font_974025_4lg5s93yerq.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_974025_4lg5s93yerq.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_974025_x1rf7bdd6j.eot');
+  src: url('//at.alicdn.com/t/font_974025_x1rf7bdd6j.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_974025_x1rf7bdd6j.woff') format('woff'),
+  url('//at.alicdn.com/t/font_974025_x1rf7bdd6j.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_974025_x1rf7bdd6j.svg#iconfont') format('svg');
 }
+
 
 .iconfont{
 	font-family: "iconfont";
@@ -66,10 +67,10 @@ a{
 	height: 100px;
 	background: #ff6800;
     text-align: center;
-	position: relative;
+/* 	position: relative;
 	left: 0;
-	bottom: -25px;
-	/* opacity: 0; */
+	bottom: -25px; */
+	opacity: 0;
 }
 
 .flag-upward-text{
@@ -91,10 +92,10 @@ a{
 	box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
 }
 
-/* .flag-upward:hover{
-	transform: translateY(-85px);
+.flag-upward:hover{
+	transform: translateY(-75px);
 	opacity: 1;
-} */
+}
 
 .appliances-bottom-right>ul>.down>.iteam-bottom-1:hover{
 	transform: translateY(-3px);
@@ -104,4 +105,37 @@ a{
 .appliances-bottom-right>ul>.down>.iteam-bottom-2:hover{
 	transform: translateY(-3px);
 	box-shadow: 0 0 10px rgba(0,0,0,0.1) ;	
+}
+
+.zhegai{
+	width: 234px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:rgba(0,0,0,0.05) ;
+}
+
+.flag-flag-saleoff{
+	width: 100%;
+	height: 20px;
+	background: #E53935;
+	padding: 0 20px;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #fff;
+	line-height: 20px;
+	position: absolute;
+}
+
+.flag-flag-gift{
+	width: 100%;
+	height: 20px;
+	background: #2196f3;
+	padding: 0 20px;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #fff;
+	line-height: 20px;
+	position: absolute;
 }

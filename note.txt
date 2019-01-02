@@ -45,6 +45,11 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 				     //css语法			  
 				  </style>
 				  
+			c.行内样式
+			
+			d.在一个css样式中引入另一个css
+			   @import url("路径");
+				  
 				  
        2.css选择器
          1. *{}  *为通用选择器    ctrl+Delete 删除此行     复制：光标放在要复制的那一行就可以复制                              
@@ -75,8 +80,39 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 		 7.选择器> 选择器       //子代选择器
 		 
 		 8.选择器：hover  //伪类选择器 当鼠标移入当前盒子时样式才会生效
+		          active //当鼠标点击盒子时生效
 		 
-		 9.选择器:nth-child(n)    //伪类选择器，选择的是第n个符合的盒子。n代表的是在父盒子里面的第几个盒子
+		 9.选择器:nth-child(n)    //伪类选择器，选择的是第n个符合的盒子。n代表的是在父盒子里面的第几个孩子，强调位置，frist-child和last-child。2n代表偶数，2n-1代表奇数
+		 
+		 10.选择器选择器  //交叉选择器
+		 
+		 11.
+		 
+		 12.a标签伪类选择器
+		 
+		    a:link{
+				color:orange;     //未访问链接样式
+			}
+			
+			a:visited{
+				color:#333;      //访问过链接样式
+			}
+			
+			<a href="#id">回到顶部</a>    //锚链接 用id选择器跳转到某个id
+			
+	属性选择器：
+	选择器[class]   //有class属性的选择器
+	选择器[class="item"]    //有class属性，并且class="item"
+	
+	^代表开始 i代表结尾
+	选择器[class^="i"]  //以i开始的
+	     [class$="i"]  //以i结束的
+		 [class~="item"]  //class有一个为item
+		 [class|="item"]  //以item-开头
+		 选择器>选择器   //子代选择器
+		 选择器~li  //后面紧挨着的兄弟元素li
+		 选择器+li  //后面紧挨着的兄弟li
+		 
 		 
 
 						   
@@ -94,6 +130,9 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 								<input type="password" />  //密码框
 								<input type="number" />  //数组框
 								outline:line;      //焦点时取消输入框焦点边框变色
+								input:fucus{
+									border:1px solid #fff    //得到焦点时文本框样式
+								}
 			      特性：不独占一行，可以设置宽高，默认的宽高由图片决定
 				  
 				 
@@ -119,6 +158,7 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 				 margin:0 auto;  //可以让块标签居中
 				 
 				 overflow:hidden  //溢出隐藏
+				          auto    //溢出隐藏，可拖动  只能在水平方向
 				 
 				 list-style:none;  //去掉默认样式
 				 
@@ -155,6 +195,7 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 							  				         none   //去掉默认水平线
 													 
 							font:weight size/line-height family;    //简写
+							  
 							  
 				  标签分类的相互转换：			  
                       display:block;  可以把其他类型标签转换为块标签
@@ -262,6 +303,10 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 		     border-top-right-radius:50%;
 				 border-bottom-right-radius:50%;
 				 
+	19. <br/>换行
+	    <hr/>水平线
+		&nbsp;  //空格
+				 
  *18.如何优化页面加载速度
      1、精灵图片  设置背景图片位置，可以使用精灵图片
 				 
@@ -361,3 +406,271 @@ CSS（层叠样式表，由浏览器解释执行的语言，可以设置网页�
 					   
 	补充：.line:nth-child(1)  //关注的是父盒子中第一个位置的child
 	      rel="shortcut icon" href="./img/ad.j窗口标题上引入icon"    //在页面窗口添加icon
+		  vertical-align:center;   文字中线居中
+	4.div{
+		width:300px;
+		height:300px;
+		text-align-center;
+		animation:move 1s linear/steps(7) 3s infinite alternate;
+		animaltion:动画的名称 动画完成时间 速度曲线/步数/*没有过渡效果*/ 延迟 动画次数；
+	}
+	
+	速度曲线：linear 匀速
+	动画次数：infinite 无限次
+	是否反向：alternate  //反向执行
+	动画状态：running  //动画运行
+	         paused   //暂停
+	动画停留的状态：backwards  //出现在动画开始的位置
+	               forwards   //停止在动画结束的位置
+				   both   //以上两种的结合
+    
+	
+	图片引入方式：
+			1.相对路径引入
+				   img,background-image:url();
+			2.base64    //减少网络请求，减少相对路径带来的404问题。通常在图片小于10k时使用
+			3.icon  //不会失真，可以利用字体属性调整样式
+			4.SVG   //不会失真，可以是多色彩的图标
+			
+			<svg>
+			    <circle fill="#fff"  stroke="#000" stroke-width="20"  cx="100" cy="100" r="50"><circle>   //相对于整个画布
+				          填充颜色     描边颜色       描边大小            圆心距离画布x，y轴坐标
+				<path d="M 300,5 L 500,200 L 550,200L 400,300 L 250，200 L 300,z" stroke="#fff"></path>
+				M代表开始坐标 L代表从开始要经过哪些点
+			</svg>
+	
+	
+	*垂直水平居中：
+	     1.确定宽高
+		  a.left：0；
+			right；0；
+			top；0；
+			bottom0；
+			margin；auto；
+			
+		  b.{
+				left:50%;
+				top:50%;
+				margin-left:-width/2;
+				margin-top:-height/2;
+			}
+			
+		  c.{
+			  left:calc(50% - 100px);
+			  top:calc(50% - 100px);
+		  }
+			
+		2.不确定宽高
+		
+		    a. flex布局
+			
+			b. left:50%;  //父盒子的50%
+			   tranfrom:tranlateX(-50%);  //自身的50%
+			   
+			c. <div style="display:table;">
+			       <div style="display:table-cell;text-align:center;vertcal-align:middle;">
+				        <div style="display:inline-block;">1111111</div>
+					</div>
+			   </div>
+			
+			
+			
+			   *{
+				  margin:0;
+				  padding:0;
+				 }
+				 
+				html{
+					display:table;
+				}
+				
+				body{
+					display:table-cell;
+					width:100vw;
+					height:100vh;
+					background:#ccc;
+					vertical-align:middle;
+					text-align:center;
+				}
+			
+				div{
+					display:inlink-block;
+				}   
+
+				   
+				   33
+	  @keyrames move（动画名）{   //旋转
+		  form{
+			  transform:rotate(0);  //开始
+		  }
+		  
+		  to{
+			  transform:rotate(360deg) //结束
+		  }
+	  }
+		  
+	  @keyrames  动画名{      //全屏滚动
+		  0%{
+		  	transform:rotate(0);  //开始
+			left:0;
+			top:0;
+		  }
+		  25%{
+			  left:calc(100vh - 200px);
+			  top:0;
+		  }
+		  50%{
+			  left:calc(100vh - 200px);
+			  top:cale(100vh - 200px);
+		  }
+		  75%{
+			  left:0
+			  top:cale(100vh-200px);
+		  }
+		  100%{
+		  	transform:rotate(360deg); //结束
+			left:0;
+			top:0;
+		  }
+
+flex样式
+  flex布局使得float失效
+  
+  em：父元素的font-size
+  rem：代表根（html）元素的font-size
+  
+  js：
+    
+	let width = window.innerwidth;   //自适应计算屏幕font-size值
+	console.log(width);
+	let fontSize = width/750;      //
+	document
+	
+rem布局：同比例缩放
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	            视口宽度            视口与设备的宽度一样         缩放比例
+				view 视图
+				
+				
+	步骤：
+	    1.设置视口
+		  heml:5   tab键补全
+		2.引入rem.js,修改设计稿的宽度（100px=1rem）
+		  <script src="js路径"></script>
+		3.引入base.css
+		  
+		4.设置最大宽度不超过640px
+		   max-width：640px；  最大宽度
+		   height:100vh;
+		   
+		   overflow:hidden  //溢出隐藏
+		   		     auto    //超出可拖动  只能在水平方向
+			选择器::-webkit-(代表谷歌，只能在谷歌浏览器使用)scrollbar{    //可以设置滚动条的样式
+				width:0;
+				height:0;
+			}
+			
+	
+	form表单
+	 <form action(代表地址)="saveinfo" method(提交方式)="get/post"></form>
+	 get:默认提交方式 提交的数据会出现在地址栏 提交信息量少时使用
+	 post：提交的信息不会出现在地址栏 提交信息量比较大时使用
+	 maxlength="10"  最多只能输入多少
+	 required  指定input必须输入信息
+	 disabled  禁止使用
+	 value  默认文字
+	 readonly  只读
+	 placeholder 提示
+	 type 输入框的类型
+	 name 提交时的参数名
+	 pattern  写入正则 输入框输入信息的类型
+	表单标签都是行内块标签
+	
+	 单选按钮    type="radio"(按钮)  name="sex" name值一样就会成为单选状态
+	 多选按钮         checkbox
+	 checked   默认选中
+	 
+	 type:
+	      text  文本
+		  password 密码
+		  radio   单选按钮  //name值一样的为一组单选按钮，checked默认被选中
+		  checkbox  多选按钮  //name值一样的为一组  checked默认被选中
+		  color   颜色
+		  date   日期  //年月日
+		  month  年月
+		  week   年周
+		  time   时分
+		  datetime-local   时分秒 
+		  number  只能输入数字
+		  email  邮箱
+		  url  输入网址
+		  number 数字
+		  tel   电话 不太起作用
+		  range  进度条，max最大值  step步进值
+		  submit  提交
+		  reset  重置
+	
+	input type="range" value="80" max="100" step="10" 
+	     
+		 
+		 视频/音乐播放
+		 <audio autoplay(自动播放) loop(循环播放)  controls(加载控件) src="">
+		 <video style="width:500px;height:300px;" src=""></video>
+	      audio，video
+		           src="路径"
+				   loop  循环播放
+				   autoplay  自动播放
+				   controls  显示控件
+			
+	table 表格
+		tr为行 th为列（表头） td为列（表身，底部）
+		border 边框  默认双边框
+		style="border-collapse:collapse;"  边框样式改为单边框
+		caption   //表格的标题
+		thead     //表格头部
+		tbody     //表格身体
+		tfoot     //表格的底部
+		colspan="n"   合并列
+		rowspan="n"   合并行
+		
+		
+		<thead>
+		   <tr>
+		       <th  colspan="2"  rowspan="2"></th>  //colspan合并列 rowspan合并行
+		       <th></th>
+		       <th></th>
+		       <th></th>
+		   </tr>
+		</thead>
+		
+		<tbody>
+		   <tr>
+		       <td></td>             //不受顺序影响
+		   </tr>
+		</tbody>
+		
+		<tfoot>
+		   <tr>
+		   	<td></td>
+		   </tr>
+		</tfoot>
+		
+		
+		
+	响应式
+	
+	     语法：
+		     @media only screen and (min-width:1000px) and (max-width:1200px){
+				 
+				 //当屏幕大于1000小于1200时生效
+				 
+			 }
+			 
+		 优点：可以快捷实现适应不同分辨率设备的布局
+		 
+		 缺点：1.代码冗余，造成页面打开速度变慢
+		      2.工作量大，效率慢
+			  3.折中的适应不同设备的方式，显示的效果不佳
+			
+
+			
