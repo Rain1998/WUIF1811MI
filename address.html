@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: "微软雅黑", "苹方";
+				font-style: normal;
+				font-weight: normal;
+			}
+
+			ul,
+			li {
+				list-style: none;
+			}
+
+			a {
+				text-decoration: none;
+				outline: none;
+			}
+
+			@font-face {
+				font-family: 'iconfont';
+				/* project id 974025 */
+				src: url('//at.alicdn.com/t/font_974025_kvuhnlktfs.eot');
+				src: url('//at.alicdn.com/t/font_974025_kvuhnlktfs.eot?#iefix') format('embedded-opentype'),
+					url('//at.alicdn.com/t/font_974025_kvuhnlktfs.woff2') format('woff2'),
+					url('//at.alicdn.com/t/font_974025_kvuhnlktfs.woff') format('woff'),
+					url('//at.alicdn.com/t/font_974025_kvuhnlktfs.ttf') format('truetype'),
+					url('//at.alicdn.com/t/font_974025_kvuhnlktfs.svg#iconfont') format('svg');
+			}
+
+			.iconfont {
+				font-family: "iconfont";
+			}
+
+			.clear::after {
+				content: "";
+				width: 0px;
+				height: 0px;
+				display: block;
+				clear: both;
+			}
+
+			.box {
+				width: 978px;
+				height: 370px;
+				background: #fff;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 36px 30px 36px 30px;
+				box-sizing: border-box;
+			}
+
+			.box>h2 {
+				width: 100%;
+				height: 68px;
+				font-size: 30px;
+				font-weight: 400;
+				line-height: 68px;
+				color: #757575;
+			}
+
+			.address-body {
+				width: 100%;
+				display: flex;
+			}
+
+			.address-body>div {
+				width: 268px;
+				height: 178px;
+				margin: 0 17px 0 0;
+				border: 1px solid #e0e0e0;
+			}
+
+			.newAddress {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: #e0e0e0;
+				transition: all 0.4s;
+			}
+			
+			.newAddress:hover{
+				color: #050505;
+				border:1px solid #050505;
+			}
+			
+			.newAddress>span{
+				font-size: 30px;
+				
+			}
+			
+			.newAddress>p{
+				font-size: 14px;
+				margin-top: 6px;
+			}
+			
+			.myAddress{
+				padding: 15px 24px;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				transition: all 0.4s;
+			}
+			
+			.myAddress:hover {
+				border:1px solid #050505;
+			}
+			
+			.myAddress:hover .seem{
+				display: block;
+			}
+			
+			.MA{
+				width: 100%;
+				height: 122px;
+				display: flex;
+				flex-direction: column;
+				
+			}
+			
+			
+			.MA h2{
+				width: 100%;
+				font-size: 18px;
+				color: #333;
+				margin-bottom: 10px;
+			}
+			
+			.MA p{
+				width: 100%;
+				font-size: 14px;
+				color: #757575;
+				margin: 2px 0;
+			}
+			
+			.actions{
+				width: 100%;
+				height: 14px;
+				display: flex;
+				justify-content: flex-end;
+			}
+			
+			.actions a{
+				font-size: 14px;
+				color: #FF6700;
+				margin: 0 4px;
+				display: none;
+				transition: all 0.4s;
+			}
+			
+			.zhezhao{
+				width: 100vw;
+				height: 100vh;
+				background: rgba(0,0,0,0.2);
+				position: absolute;
+				top: 0;
+				margin: 0;
+			}
+			
+			.newtable{
+				width: 660px;
+				height: 460px;
+				background: #fff;
+				z-index: 30;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			
+			.title{
+				width: 100%;
+				height: 52px;
+				padding: 14px 20px;
+				box-sizing: border-box;
+				font-size: 18px;
+				font-weight: 400;
+				color: #333;
+				line-height: 24px;
+				background: #f5f5f5;
+			}
+			
+			.newtableBody{
+				width: 100%;
+				height: 320px;
+				
+				padding: 40px 40px 0 40px;
+				box-sizing: border-box;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			
+			.newtableBody>div{
+				border: 1px solid #e0e0e0;
+				position: relative;
+				transition: all 0.3s;
+			}
+			
+			.newtableBody>div:hover{
+				border: 1px solid #333;
+			}
+			
+			.newtableBody div>input{
+				width: 100%;
+				height: 100%;							
+				outline: line;
+				border: none;
+				padding: 10px 16px;
+				box-sizing: border-box;
+			}
+			
+			.mine{
+				width: 283px;
+				height: 40px;				
+			}
+			
+			.mine>input{
+				color: #e0e0e0;
+			}
+			
+			.newtableBody div>span{
+				height: 20px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #b0b0b0;
+				position: absolute;
+				top: -9px;
+				left: 12px;
+				background: #fff;
+				padding: 0 3px;
+			}
+			
+			.chance{
+				width: 100%;
+				height: 40px;
+			}
+			
+			.chance i{
+				width: 24px;
+				height: 24px;
+				font-size: 16px;
+				text-align: center;
+				line-height: 24px;
+				color: #333;
+				position: absolute;
+				top: 8px;
+				right: 5px;
+			}
+			
+			.myxsaddress{
+				width: 100%;
+				height: 64px;
+			}
+			
+			.button{
+				width: 100%;
+				height: 80px;
+				padding: 20px 0;
+				box-sizing: border-box;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #f5f5f5;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			
+			.button>a{
+				width: 160px;
+				height: 40px;
+				font-size: 14px;
+				text-align: center;
+				line-height: 40px;
+				color: #fff;
+				margin: 0 7px;
+			}
+			
+			.BC{
+				background: #FF6700;
+				transition: all 0.4s;
+			}
+			
+			.BC:hover{
+				background: #f25870;
+			}
+			
+			.QX{
+				background: #b0b0b0;
+				transition: all 0.4s;
+			}
+			
+			.QX:hover{
+				background: #757575;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+
+		<div class="box">
+
+			<h2>收货地址</h2>
+
+			<div class="address-body">
+
+				<div class="newAddress">
+					<span class="iconfont">&#xe609;</span>
+					<p>添加新地址</p>
+				</div>
+
+				<div class="myAddress">
+					
+					<div class="MA">
+						<h2>沈秀珠</h2>
+						<p>159****3589</p>
+						<p>陕西 西安市 新城区 西一路街道 建设小区15栋 (710004)</p>
+					</div>
+					
+					<div class="actions">
+						
+						<a class="seem" href="">修改</a>
+						<a class="seem" href="">删除</a>
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		
+		<div class="zhezhao"></div>
+		
+		<div class="newtable">
+			<div class="title">添加收货地址</div>
+			
+			<div class="newtableBody">
+				
+				<div class="mine">
+					
+					<input type="text" >
+					
+					<span>姓名</span>
+					
+				</div>
+				
+				<div class="mine">
+					
+					<input type="text" value="手机号" >
+					
+				</div>
+				
+				<div class="chance">
+					
+					<input type="text" value="选择省 / 市 / 区 / 街道">
+					
+					<i class="iconfont">&#xe7fd;</i>
+					
+				</div>
+				
+				<div class="myxsaddress">
+					
+					<input type="text">
+					
+					<span>详细地址</span>
+					
+				</div>
+				
+				<div class="mine">
+					
+					<input type="text" >
+					
+					<span>邮政编码</span>
+					
+				</div>
+				
+				<div class="mine">
+					
+					<input type="text" value="地址标签" >
+					
+				</div>
+				
+				
+			</div>
+			
+			<div class="button">
+				
+				<a href="" class="BC">保存</a>
+				
+				<a href="" class="QX">取消</a>
+				
+			</div>
+			
+			
+		</div>
+
+		
+	
+	</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/base.css">
+		<title></title>
+	</head>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑", "苹方";
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		ul,li {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			outline: none;
+		}
+
+		@font-face {
+			font-family: 'iconfont';
+			/* project id 974025 */
+			src: url('//at.alicdn.com/t/font_974025_kvuhnlktfs.eot');
+			src: url('//at.alicdn.com/t/font_974025_kvuhnlktfs.eot?#iefix') format('embedded-opentype'),
+				url('//at.alicdn.com/t/font_974025_kvuhnlktfs.woff2') format('woff2'),
+				url('//at.alicdn.com/t/font_974025_kvuhnlktfs.woff') format('woff'),
+				url('//at.alicdn.com/t/font_974025_kvuhnlktfs.ttf') format('truetype'),
+				url('//at.alicdn.com/t/font_974025_kvuhnlktfs.svg#iconfont') format('svg');
+		}
+
+		.iconfont {
+			font-family: "iconfont";
+		}
+
+		.clear::after {
+			content: "";
+			width: 0px;
+			height: 0px;
+			display: block;
+			clear: both;
+		}
+
+		.box {
+			width: 978px;
+			height: 600px;
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 36px 30px 36px 30px;
+			box-sizing: border-box;
+		}
+
+		.main {
+			width: 882px;
+			height: 200px;
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid #0E0E0E;
+			padding-bottom: 30px;
+		}
+
+		.main>div {
+			height: 100%;
+			width: calc(882px / 2);
+			display: flex;
+			align-items: center;
+		}
+
+		.pic {
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			border: 1px solid #b0b0b0;
+			overflow: hidden;
+		}
+
+		.pic>img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.portrailt-text {
+			display: flex;
+			flex-direction: column;
+			margin-left: 30px;
+		}
+
+		.portrailt-text p {
+			font-size: 24px;
+			color: #616161;
+		}
+
+		.portrailt-text span {
+			font-size: 16px;
+			color: #b0b0b0;
+			padding-bottom: 10px;
+		}
+
+		.portrailt-text a {
+			font-size: 12px;
+			color: #FF6700;
+		}
+
+		.situation {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.situation p {
+			width: 100%;
+			font-size: 14px;
+			color: #757575;
+			margin: 6px 0;
+		}
+
+		.situation p span {
+			color: #FF6700;
+		}
+
+		.situation div {
+			width: 100%;
+			font-size: 14px;
+			color: #757575;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 6px;
+		}
+
+		.situation div i {
+			width: 120px;
+			height: 30px;
+			background: #FF6700;
+			color: #fff;
+			font-size: 18px;
+			text-align: center;
+			line-height: 30px;
+		}
+
+		.query {
+			width: 882px;
+			height: 380px;
+			display: flex;
+			flex-wrap: wrap;
+			padding-top: 60px;
+			box-sizing: border-box;
+		}
+
+		.query>div {
+			height: 100px;
+			display: flex;
+		}
+
+		.query div>img {
+			width: 100px;
+			height: 100px;
+		}
+
+		.query div>span {
+			width: 276px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 30px;
+		}
+
+		.query div span>h2 {
+			width: 100%;
+			font-size: 18px;
+			color: #757575;
+			margin-bottom: 8px;
+		}
+
+		.query div span h2>span {
+			color: #FF6700;
+			font-size: 18px;
+			font-weight: 400;
+		}
+
+		.query div span>a {
+			width: 100%;
+			font-size: 12px;
+			color: #757575;
+			transition: all 0.3s;
+		}
+
+		.query div span>a:hover {
+			color: #FF6700;
+		}
+
+		.query div span a>i {
+			font-size: 12px;
+			color: #757575;
+		}
+	</style>
+
+	<body>
+
+		<div class="box">
+
+			<div class="main">
+
+				<div class="portrailt">
+
+					<div class="pic">
+						<img src="https://account.xiaomi.com/static/img/passport/photo.jpg" alt="">
+					</div>
+
+					<div class="portrailt-text">
+
+						<p>2196104409</p>
+						<span>晚上好</span>
+						<a href="">修改个人信息 > </a>
+
+					</div>
+
+				</div>
+
+				<div class="situation">
+					<p>账户安全：<span>普通</span></p>
+					<p>绑定手机：188********72</p>
+					<div class="email">绑定邮箱： <i>绑定</i></div>
+				</div>
+
+			</div>
+
+			<div class="query">
+
+				<div>
+					<img src="https://s01.mifile.cn/i/user/portal-icon-1.png" alt="">
+					<span>
+						<h2>待支付的订单：<span>1</span></h2>
+						<a>查看待支付订单<i class="iconfont">&#xe658;</i></a>
+					</span>
+				</div>
+
+				<div>
+					<img src="https://s01.mifile.cn/i/user/portal-icon-2.png" alt="">
+					<span>
+						<h2>待收货的订单：<span>0</span></h2>
+						<a>查看待收货订单<i class="iconfont">&#xe658;</i></a>
+					</span>
+				</div>
+
+				<div>
+					<img src="https://s01.mifile.cn/i/user/portal-icon-3.png" alt="">
+					<span>
+						<h2>待评价商品数：<span>0</span></h2>
+						<a>查看待评价商品<i class="iconfont">&#xe658;</i></a>
+					</span>
+				</div>
+
+				<div>
+					<img src="https://s01.mifile.cn/i/user/portal-icon-4.png" alt="">
+					<span>
+						<h2>喜欢的商品：<span>1</span></h2>
+						<a>查看喜欢的商品<i class="iconfont">&#xe658;</i></a>
+					</span>
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

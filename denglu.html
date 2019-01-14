@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/denglu.css">
+		<title></title>
+	</head>
+	<body>
+
+		<header class="head">
+
+			<div class="logo">
+
+				<a href="">
+					<img src="img/LOGO.png" alt="">
+				</a>
+
+			</div>
+
+		</header>
+
+		<div class="banner">
+
+
+			<a href="">
+
+				<img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/af1d661322b54160a34bd319a671b6d9.jpg" alt="">
+
+			</a>
+
+
+
+			<div class="layout">
+
+				<div class="top">
+
+					<ul>
+						<li class="active top-text">账号登录</li>
+
+						<li>
+							<div class="line"></div>
+						</li>
+
+						<li class="top-text">扫码登录</li>
+
+					</ul>
+
+				</div>
+
+				<div class="bottom">
+
+					<div class="Phone">
+
+						<div class="phone">
+
+							<div class="phone-top">
+
+								<input type="text">
+
+								<input type="text">
+
+
+							</div>
+
+
+							<button>登录</button>
+
+							<div class="botton-text">
+
+								<a href="" class="text-left">手机短信登录/注册</a>
+
+								<div class="text-right">
+
+									<a href="">立即注册</a>
+
+									<div class="text-line">|</div>
+
+									<a href="">忘记密码?</a>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<div class="phone-footer">
+
+							<div class="layout-hr">
+
+								<div></div>
+
+								<p>其他方式登录</p>
+
+								<div></div>
+
+							</div>
+
+
+							<div class="phone-pictor">
+
+								<span class="iconfont  icon">
+									<img src="img/QQ.png" alt="">
+								</span>
+
+								<span class="iconfont  icon">
+									<img src="img/微博.png" alt="">
+								</span>
+
+								<span class="iconfont  icon">
+									<img src="img/支付宝(1).png" alt="">
+								</span>
+
+								<span class="iconfont  icon">
+									<img src="img/微信(2).png" alt="">
+								</span>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+					<div class="SC">
+
+						<div class="scan-code">
+
+							<div class="scan-code-dl">
+								<img src="img/scan.png" alt="">
+							</div>
+
+							<p class="sm">使用<span>小米商城APP</span>扫一扫</p>
+
+							<p>小米手机可打开「设置」>「小米帐号」扫码登录</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		let topLis = document.querySelectorAll(".layout .top li");
+
+		let bottomLis = document.querySelectorAll(".layout .bottom div")
+
+		topLis.forEach(function (val,index) {
+            //全部添加点击事件
+            val.onclick = function () {
+
+                bottomLis.forEach(function (val,key) {
+                 //去掉上面所有li的选择状态
+                 topLis[key].style.color = "#5f5750";
+                 //全部隐藏下面的div,
+                 val.style.display = "none";
+                });
+
+                //显示对应的下面的li
+                bottomLis[index].style.display = "block";
+                //给对应的上面的div颜色
+                topLis[index].style.color = "#ff6700";
+            }
+        });
+
+	</script>
+
+</html>

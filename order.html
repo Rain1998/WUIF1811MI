@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/order.css">
+		<title></title>
+	</head>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑", "苹方";
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			outline: none;
+		}
+
+		@font-face {
+			font-family: 'iconfont';
+			/* project id 974025 */
+			src: url('//at.alicdn.com/t/font_974025_6owrtcp63kn.eot');
+			src: url('//at.alicdn.com/t/font_974025_6owrtcp63kn.eot?#iefix') format('embedded-opentype'),
+				url('//at.alicdn.com/t/font_974025_6owrtcp63kn.woff2') format('woff2'),
+				url('//at.alicdn.com/t/font_974025_6owrtcp63kn.woff') format('woff'),
+				url('//at.alicdn.com/t/font_974025_6owrtcp63kn.ttf') format('truetype'),
+				url('//at.alicdn.com/t/font_974025_6owrtcp63kn.svg#iconfont') format('svg');
+		}
+
+		.iconfont {
+			font-family: "iconfont";
+		}
+
+		.clear::after {
+			content: "";
+			width: 0px;
+			height: 0px;
+			display: block;
+			clear: both;
+		}
+
+		.box {
+			width: 978px;
+			height: 600px;
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 36px 30px 36px 30px;
+			box-sizing: border-box;
+		}
+
+		.box>div {
+			width: 882px;
+		}
+
+		.uc-right-title {
+			display: flex;
+			align-items: baseline;
+			padding: 12px 0 0 0;
+		}
+
+		.uc-right-title>h1 {
+			font-size: 30px;
+			font-weight: 400;
+			color: #757575;
+		}
+
+		.uc-right-title>a {
+			font-size: 12px;
+			margin-left: 10px;
+		}
+
+		.uc-right-more {
+			height: 56px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 18px 0;
+		}
+
+		.more-left {
+			display: flex;
+			font-size: 16px;
+			color: #333;
+		}
+
+		.more-left a {
+			display: flex;
+			color: #757575;
+		}
+
+		.more-left a>.line {
+			padding: 0 20px;
+			color: #423b36;
+		}
+
+		.uc-right-more a>.text {
+			transition: all 0.3s;
+		}
+
+		.uc-right-more a>.text:hover {
+			color: #212121;
+		}
+
+		.uc-right-orderlist {
+			width: 880px;
+			border: 1px solid #FF6700;
+		}
+
+		.uc-right-orderlist>div {
+			width: 100%;
+			padding: 0 30px;
+			box-sizing: border-box;
+		}
+
+		.orderlist-head {
+			width: 100%;
+			background: #fffaf7;
+		}
+
+		.orderlist-head>h2 {
+			font-size: 18px;
+			color: #FF6700;
+			padding-top: 25px;
+		}
+
+		.orderlist-head>div {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+		}
+
+		.orderlist-head div>p {
+			display: flex;
+			font-size: 12px;
+			color: #757575;
+			padding: 8px 0 24px 0;
+
+		}
+
+		.orderlist-head div p>i {
+			padding: 0 5px;
+		}
+
+		.orderlist-head div p>a {
+			transition: all 0.3s;
+		}
+
+		.orderlist-head div p>a:hover {
+			color: #FF6700;
+		}
+
+		.orderlist-price {
+			font-size: 26px;
+		}
+
+		.orderlist-bottom {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			border-top: 1px solid #FF6700;
+		}
+
+		.orderlist-bottom .bottom {
+			width: 882px;
+			height: 122px;
+			margin-top: 22px;
+			display: flex;
+		}
+
+		.orderlist-bottom .bottom img {
+			width: 80px;
+			height: 80px;
+		}
+
+		.orderlist-bottom .bottom img:hover {
+			cursor: pointer;
+		}
+
+		.orderlist-bottom .bottom .wenzi-box {
+			width: 410px;
+			height: 80px;
+		}
+
+		.orderlist-bottom .bottom .wenzi-box .text1 {
+			color: #333;
+			font-size: 16px;
+			margin-left: 10px;
+		}
+
+		.orderlist-bottom .bottom .wenzi-box .text {
+			margin-top: 20px;
+		}
+
+		.orderlist-bottom .bottom .anniu {
+			width: 340px;
+			height: 80px;
+			float: right;
+		}
+
+		.orderlist-bottom .bottom .anniu>div {
+			width: 118px;
+			height: 32px;
+			background: #2196F3;
+			margin-left: 220px;
+			text-align: center;
+			line-height: 32px;
+		}
+
+		.orderlist-bottom .bottom .anniu .fk {
+			background: #ff6700;
+			color: white;
+			border: 1px solid #ff6700;
+		}
+
+		.orderlist-bottom .bottom .anniu .fk:hover {
+			cursor: pointer;
+		}
+
+		.orderlist-bottom .bottom .anniu .xq {
+			margin-top: 8px;
+			border: 1px solid #0e0e0e;
+			background: white;
+		}
+
+		.orderlist-bottom .bottom .anniu .xq:hover {
+			cursor: pointer;
+			background: #757575;
+			color: white;
+		}
+
+		.icon {
+			width: 100%;
+			height: 30px;
+			font-size: 30px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			padding-top: 40px;
+		}
+
+		.icon .icon-left,
+		.icon-right {
+			height: 100%;
+			line-height: 30px;
+			font-size: 16px;
+			color: rgba(0, 0, 0, 0.2);
+		}
+
+		.goods-num {
+			width: 48px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background: #757575;
+			font-size: 20px;
+			margin: 0 14px;
+		}
+	</style>
+
+	<body>
+
+		<div class="box">
+
+			<div class="uc-right-title">
+
+				<h1>我的订单</h1>
+
+				<a>请谨防钓鱼链接或诈骗电话,了解更多<i class="iconfont">&#xe658;</i></a>
+
+			</div>
+
+
+			<div class="uc-right-more">
+
+				<div class="more-left">
+					<a href="">
+						<div class="text" id="dd-active">全部有效订单</div>
+						<div class="line">|</div>
+					</a>
+
+					<a href="">
+						<div class="text">待支付</div>
+						<div class="line">|</div>
+					</a>
+
+					<a href="">
+						<div class="text">待收货</div>
+						<div class="line">|</div>
+					</a>
+
+					<a href="">
+						<div class="text">已关闭</div>
+					</a>
+				</div>
+
+			</div>
+
+
+
+
+			<div class="uc-right-orderlist">
+
+				<div class="orderlist-head">
+
+					<h2>等待付款</h2>
+
+					<div>
+
+						<p class="info"><span>2019年01月10日 22:09</span><i>|</i><span>沈秀珠</span><i>|</i><span>订单号：</span> <a href="">5190110959111390</a><i>|</i><span>在线支付</span></p>
+
+						<p><span>订单金额：</span> <i class="orderlist-price">39.00</i> <span>元</span></p>
+
+					</div>
+
+				</div>
+
+				<div class="orderlist-bottom">
+
+					<div class="bottom">
+						<img src="https://i1.mifile.cn/a1/pms_1527839741.58144552!80x80.jpg">
+						<div class="wenzi-box">
+							<div class="text1 text">小米8 标准钢化玻璃膜 透明</div>
+							<div class="text1">39元 x 1</div>
+						</div>
+						<div class="anniu">
+							<div class="fk">立即付款</div>
+							<div class="xq">订单详情</div>
+						</div>
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+			<div class="icon">
+
+				<span class="iconfont icon-left">&#xe6a5;</span>
+
+				<span class="goods-num">1</span>
+
+				<span class="iconfont icon-right">&#xe658;</span>
+
+			</div>
+
+
+		</div>
+
+	</body>
+</html>
